@@ -20,6 +20,6 @@ use App\Http\Controllers\UserController;
 
 //Route::post('register', 'UserController@store');
 
-Route::post('register', 'App\Http\Controllers\UserController@store');
+Route::post('register', 'App\Http\Controllers\UserController@store')->name('users.store');
 
 //Route::post('register', [UserController::class, 'store']);

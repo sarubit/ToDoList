@@ -45,7 +45,7 @@ class StoreUser extends FormRequest
 
         if ($validator->fails()) {
             throw new HttpResponseException(response()->json([
-                'msg'   => 'Ops! Algum campo obrigatório não foi preenchido.',
+                'msg'   => 'Ops! Algum campo obrigatório não foi preenchido ou o email ja foi cadastrado',
                 'status' => false,
                 'errors'    => $validator->errors(),
                 'url'    => route('users.store')
